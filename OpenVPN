@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Update package lists
+
+sudo apt-get update
+
+# Install OpenVPN
+
+sudo apt-get install openvpn -y
+
+# Download the OpenVPN configuration files
+
+sudo wget https://example.com/client.ovpn -O /etc/openvpn/client.conf
+
+# Start the OpenVPN client
+
+sudo systemctl start openvpn@client
+
+# Enable the OpenVPN client to start at boot
+
+sudo systemctl enable openvpn@client
+
+# Check the status of the OpenVPN client
+
+sudo systemctl status openvpn@client
+
